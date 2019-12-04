@@ -1,0 +1,109 @@
+.present {
+    height:472px;
+    font-family: $montserrat;
+    color:#635c73;
+    text-align: center;
+    @include flex-column;
+    justify-content: center;
+    position: relative;
+
+    .present__header {
+        font-size:26px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.615;
+        padding:0px 10px;
+    }
+
+    .present__text {
+        font-size:14px;
+        font-family: $lato;
+        line-height: 1.429;
+        padding:15px 10px 0px;
+        font-weight: 400;
+    }
+
+    .present-list-btn {
+        padding: 30px 10px 0px;
+        @include flex-row;
+        flex-wrap: wrap;
+        
+        li {
+            @include flex-row;
+        }
+
+        li:nth-last-child(1) {
+            margin-top:20px;
+            flex:0 1 100%;
+        }
+
+        li:not(:nth-last-child(3)) {
+            margin-left:10px;
+        }
+
+        li a:nth-child(2) {
+            color:#333252;
+            font-size: 12px;
+            font-weight: bold;
+            padding:5px;
+            border:1px solid #d5d5d5;
+            border-left:0px;
+            border-radius: 5%;
+        }
+
+        li a:nth-child(1) {
+            color:#333252;
+            font-size: 12px;
+            font-weight: bold;
+            @include flex-row;
+            border:1px solid #d5d5d5;
+            border-radius: 5%;
+            background: #f0f0ef;
+            padding:5px;
+            box-shadow: inset 0 0 2px 0.5px rgba(0,0,0,0.1)
+        }
+
+        .iconify {
+            color:#222222;
+            padding-right:3px;
+        }
+    }
+}
+
+@media #{$tablet} { 
+    .present {
+        height:438px;
+
+        .present__header {
+            margin-top:50px;
+            font-size:42px;
+        }
+
+        .present__text {
+            font-size:21px;
+            padding:15px 10px 0px;
+        }
+        .present-list-btn {
+            flex-wrap:nowrap;
+            
+            li:nth-last-child(1) {
+                margin-top:0px;
+                flex:0;
+            }
+        }
+    }
+}
+
+@media #{$lowDesktop} { 
+    .present {
+        height: 390px;
+
+        .present__header {
+            font-size:54px;
+        }
+
+        >* {
+            max-width: 1200px;
+        }
+    }
+}

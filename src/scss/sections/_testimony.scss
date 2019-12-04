@@ -1,0 +1,90 @@
+.testimony{
+    background-image: url('../img/testimonials-bg_1200px.png');
+    background-position: center;
+    background-size: cover;
+    
+
+    &__header-title{
+        @include flex-row;
+        opacity: 0.85;
+        font-size: 36px;
+        line-height: 40px;
+        color: #ffffff;
+        font-family: $montserrat;
+        font-weight: 700;
+        text-align: center;
+        padding: 100px 0;
+        text-transform: capitalize;
+    }
+
+    .flexcontainer{
+        @include flex-row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &-contents{
+        @include flex-column;
+        width: 100%;
+        padding-bottom: 100px;
+    }
+
+    &-contents__text{
+        width: 80%;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+        font-family: $lato;
+        font-weight: 500;
+        font-style: italic;
+        text-align: center;
+        padding-top: 40px;
+        opacity: 0.85;
+    }
+
+}
+
+
+@media #{$tablet}{
+
+    .testimony__header-title{
+        font-size: 42px;
+    }
+
+    .testimony-contents{
+        width: calc(100% / 2);
+    }
+
+    .padding{
+        padding-top: 80px;
+    }
+
+    .transform{
+        transform: translateY(25px);
+    }
+
+
+}
+
+
+@media #{$highDesktop}{
+
+    .testimony-contents__text{
+        font-size: 16px;
+        line-height: 24px;
+        width: 80%;
+    }
+
+    .testimony-contents{
+        width: calc(100% / 3);
+    }
+
+    .transform{
+        transform: translateY(0);
+    }
+
+    .padding{
+        padding-top: 55px;
+    }
+
+}
